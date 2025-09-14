@@ -22,7 +22,7 @@ async (conn, mek, m, { from, reply }) => {
         const repoData = response.data;
 
         const formattedInfo = `
-╭─〔 *PK-XMD REPOSITORY* 〕
+╭─〔 *ZEZE-XMD REPOSITORY* 〕
 │
 ├─ *📌 Repo Name:* ${repoData.name}
 ├─ *👤 Owner:* ${repoData.owner.login}
