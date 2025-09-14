@@ -16,7 +16,7 @@ async (conn, mek, m, { from, q, reply, sender }) => {
         // ✅ Create fake verified contact
         const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:PK-XMD Official ✅
+FN:ZEZE TECH✅
 TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}
 END:VCARD`;
 
@@ -45,7 +45,7 @@ END:VCARD`;
 > 💨 *Wind:* ${data.wind.speed} m/s  
 > 📊 *Pressure:* ${data.main.pressure} hPa  
 
-> ⚙️ *Powered by Pkdriller*
+> ⚙️ *Powered by zezetech*
 `;
 
         await conn.sendMessage(from, {
