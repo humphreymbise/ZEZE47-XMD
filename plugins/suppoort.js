@@ -7,7 +7,7 @@ const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 cmd({
-    pattern: "supportt",
+    pattern: "support",
     alias : "version1",
     desc: " allmenu",
     category: "allmenu",
@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 let dec = `    
 ⟣──────────────────⟢
-▧ *ᴄʀᴇᴀᴛᴏʀ* : *ᴍʀ ᴄᴀsᴇʏʀʜᴏᴅᴇs (🇰🇪)*
+▧ *ᴄʀᴇᴀᴛᴏʀ* : *MR HUMPHREY47(🇹🇿)*
 ▧ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ▧ *ᴘʀᴇғɪx* : *${config.PREFIX}*
 ▧ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
@@ -28,20 +28,20 @@ let dec = `
 
 ⟣──────────────────⟢
 
-> 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒-𝐗𝐌𝐃 
+> ZEZE47-MD-V4
 
 ⟣──────────────────⟢
 ${readMore}
 \`CHANNEL🛠️\`
-https://tinyurl.com/26kh6jss
+
 
 \`GROUP\` 👥
 
-https://tinyurl.com/26kh6jss
 
-\`𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒 𝐗𝐌𝐃\` *Dev🧑‍💻*
 
-wa.me/+254112192119?text=Support!
+\`ZEZE TECH\` *Dev🧑‍💻*
+
+wa.me/+255747397675?text=Support!
 
 ⟣──────────────────⟢
 
@@ -50,15 +50,15 @@ wa.me/+254112192119?text=Support!
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.ibb.co/NdGZ99mN/705f0162-de6f-4fb8-a78f-6c563969093c.jpg` },
+                image: { url: `https://i.imgur.com/wZcGmu7.jpeg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363302677217436@newsletter',
-                        newsletterName: '『 𝐂𝐀𝐒𝐄𝐘𝐑𝐇𝐎𝐃𝐄𝐒-𝐗𝐌𝐃 』',
+                        newsletterJid: '',
+                        newsletterName: 'ZEZE TECH',
                         serverMessageId: 143
                     }
                 }
