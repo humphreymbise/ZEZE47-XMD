@@ -31,7 +31,7 @@ cmd({
     }
   };
 
-  const uptimeText = `*🤖 ZEZE47-MD Bot Uptime:*\n🕒 ${runtime()}\n\n💡 The bot has been running without interruption.`;
+  const uptimeText = `*🤖 ZEZE47-MD Bot Uptime:*\n🕒 ${runtime()}\n\n💡 THE BOT IS POWERFUL THAN A JET.`;
 
   await Void.sendMessage(m.chat, {
     text: uptimeText,
@@ -43,13 +43,13 @@ cmd({
         newsletterName: "ZEZE47-MD"
       },
       externalAdReply: {
-        title: "PK-XMD",
+        title: "ZEZE BOY",
         body: "Uptime Monitor by ZEZE47-MD",
         thumbnailUrl: "https://i.imgur.com/wZcGmu7.jpeg",
         mediaType: 1,
         renderLargerThumbnail: true,
         showAdAttribution: true,
-        sourceUrl: "https://github.com/mejjar00254"
+        sourceUrl: ""
       }
     }
   }, { quoted: fakeContact });
