@@ -1,49 +1,71 @@
 const { cmd } = require('../command');
-const os = require("os");
+const moment = require('moment-timezone');
 const { runtime } = require('../lib/functions');
-const config = require('../config');
 
 cmd({
-    pattern: "alive",
-    alias: ["status", "online", "a"],
-    desc: "Check bot is alive or not",
-    category: "main",
-    react: "⚡",
-    filename: __filename
-},
-async (conn, mek, m, { from, sender, reply }) => {
-    try {
-        const status = `
-╭───〔 *${config.BOT_NAME}* 〕───◉
-│✨ *Bot is Active & Online!*
-│
-│🧠 *Owner:* ${config.OWNER_NAME}
-│⚡ *Version:* 5.0.0 Pro
-│📝 *Prefix:* [${config.PREFIX}]
-│📳 *Mode:* [${config.MODE}]
-│💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-│🖥️ *Host:* ${os.hostname()}
-│⌛ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
-> ${config.DESCRIPTION}`;
+  pattern: "alive",
+  alias: ["status", "botstatus"],
+  desc: "Show bot status information",
+  category: "system",
+  react: "⚡",
+  filename: __filename
+}, async (Void, mek, m) => {
+  try {
+    const time = moment.tz('Africa/Nairobi').format('HH:mm:ss');
+    const date = moment.tz('Africa/Nairobi').format('DD/MM/YYYY');
+    const uptime = runtime(process.uptime());
 
-        await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL },
-            caption: status,
-            contextInfo: {
-                mentionedJid: [m.sender],
-                forwardingScore: 1000,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '',
-                    newsletterName: 'ZEZE47-MD',
-                    serverMessageId: 143
-                }
-            }
-        }, { quoted: mek });
+    // Simple and clean status message
+    const message = `
+⚡ *ZEZE BOT STATUS* ⚡
 
-    } catch (e) {
-        console.error("Alive Error:", e);
-        reply(`An error occurred: ${e.message}`);
-    }
+🌍 Server Time: ${time}
+📅 Date: ${date}
+⏱️ Uptime: ${uptime}
+
+🔧 Powered by MR ZEZE
+`.trim();
+
+    // Newsletter context info
+    const contextInfo = {
+      externalAdReply: {
+        title: "ZEZE47-MD • BOT STATUS",
+        body: `Online since ${uptime}`,
+        thumbnailUrl: 'https://i.imgur.com/wZcGmu7.jpeg',
+        sourceUrl: 'https://github.com/humphreymbise/ZEZE47-XMD',
+        mediaType: 1,
+        renderLargerThumbnail: true
+      },
+      forwardingScore: 999,
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: "",
+        newsletterName: "ZEZE47-MD",
+        serverMessageId: 789
+      }
+    };
+
+    await Void.sendMessage(
+      m.chat, 
+      {
+        text: message,
+        contextInfo: contextInfo
+      },
+      { 
+        quoted: mek 
+      }
+    );
+
+  } catch (error) {
+    console.error('Alive command error:', error);
+    await Void.sendMessage(
+      m.chat, 
+      { 
+        text: '⚠️ Error showing status. Bot is still running!' 
+      },
+      { 
+        quoted: mek 
+      }
+    );
+  }
 });
