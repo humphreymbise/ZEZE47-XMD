@@ -17,30 +17,30 @@ cmd({
 
     // Simple and clean status message
     const message = `
-⚡ *PK-XMD BOT STATUS* ⚡
+⚡ *ZEZE47-XMD BOT STATUS* ⚡
 
 🌍 Server Time: ${time}
 📅 Date: ${date}
 ⏱️ Uptime: ${uptime}
 
-🔧 Powered by Pkdriller
+🔧 Powered by zezetech 
 `.trim();
 
     // Newsletter context info
     const contextInfo = {
       externalAdReply: {
-        title: "PK-XMD • BOT STATUS",
+        title: "ZEZE47-XMD • BOT STATUS",
         body: `Online since ${uptime}`,
-        thumbnailUrl: 'https://files.catbox.moe/fgiecg.jpg',
-        sourceUrl: 'https://github.com/mejjar00254/PK-XMD',
+        thumbnailUrl: 'https://i.imgur.com/wZcGmu7.jpeg',
+        sourceUrl: '',
         mediaType: 1,
         renderLargerThumbnail: true
       },
       forwardingScore: 999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363288304618280@newsletter",
-        newsletterName: "PK-XMD Official",
+        newsletterJid: "",
+        newsletterName: "ZEZE47-MD",
         serverMessageId: 789
       }
     };
