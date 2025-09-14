@@ -23,31 +23,31 @@ cmd({
     
     // Beautiful ping message
     const message = `
-⚡ *PK-XMD PING RESULTS* ⚡
+⚡ *ZEZE-XMD PING RESULTS* ⚡
 
 🏓 Response Speed: ${speed}ms
 🌍 Server Location: Africa/Nairobi
 🕒 Server Time: ${time}
 📅 Date: ${date}
 
-🔧 Powered by Pkdriller
+🔧 Powered by zeze
 `.trim();
 
     // Newsletter context
     const contextInfo = {
       externalAdReply: {
-        title: "PK-XMD • PING",
+        title: "ZEZE-XMD • PING",
         body: `Response: ${speed}ms`,
-        thumbnailUrl: 'https://files.catbox.moe/fgiecg.jpg',
-        sourceUrl: 'https://github.com/mejjar00254/PK-XMD',
+        thumbnailUrl: 'https://i.imgur.com/wZcGmu7.jpeg',
+        sourceUrl: '',
         mediaType: 1,
         renderLargerThumbnail: true
       },
       forwardingScore: 999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363288304618280@newsletter",
-        newsletterName: "PK-XMD Official",
+        newsletterJid: "",
+        newsletterName: "ZEZE",
         serverMessageId: 456
       }
     };
