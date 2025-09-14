@@ -51,7 +51,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                     serverMessageId: 143
                 },
                 externalAdReply: {
-                    title: "Queen_faith47",
+                    title: "ZEZE47-MD",
                     body: "Multi-Device WhatsApp Bot",
                     thumbnailUrl: "https://i.imgur.com/wZcGmu7.jpeg",
                     mediaType: 1,
