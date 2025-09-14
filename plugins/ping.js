@@ -23,14 +23,14 @@ cmd({
     
     // Beautiful ping message
     const message = `
-⚡ *PK-XMD PING RESULTS* ⚡
+⚡ *ZEZE47-MD PING RESULTS* ⚡
 
 🏓 Response Speed: ${speed}ms
 🌍 Server Location: Africa/Nairobi
 🕒 Server Time: ${time}
 📅 Date: ${date}
 
-🔧 Powered by Zeze
+🔧 Powered by zezetech 
 `.trim();
 
     // Newsletter context
@@ -46,7 +46,7 @@ cmd({
       forwardingScore: 999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
-        newsletterJid: "120363288304618280@newsletter",
+        newsletterJid: "",
         newsletterName: "ZEZE47-MD",
         serverMessageId: 456
       }
